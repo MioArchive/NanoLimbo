@@ -1,4 +1,4 @@
-package ua.nanit.limbo.server.commands;
+package ua.nanit.limbo.server.command;
 
 import ua.nanit.limbo.server.Command;
 import ua.nanit.limbo.server.LimboServer;
@@ -6,11 +6,11 @@ import ua.nanit.limbo.server.Log;
 
 import java.util.Map;
 
-public class CmdHelp implements Command {
+public class HelpCommand implements Command {
 
     private final LimboServer server;
 
-    public CmdHelp(LimboServer server) {
+    public HelpCommand(LimboServer server) {
         this.server = server;
     }
 
@@ -27,6 +27,6 @@ public class CmdHelp implements Command {
 
     @Override
     public String description() {
-        return "Show this message";
+        return "Showing all available commands";
     }
 }

@@ -1,6 +1,6 @@
 package ua.nanit.limbo.server;
 
-import ua.nanit.limbo.server.commands.*;
+import ua.nanit.limbo.server.command.*;
 
 import java.util.*;
 
@@ -50,10 +50,9 @@ public final class CommandManager extends Thread {
     }
 
     public void registerAll(LimboServer server) {
-        register(new CmdHelp(server), "help");
-        register(new CmdConn(server), "conn");
-        register(new CmdMem(), "mem");
-        register(new CmdStop(), "stop");
-        register(new CmdVersion(), "version", "ver");
+        register(new HelpCommand(server), "help");
+        register(new ConnectionCommand(server), "conn");
+        register(new MemoryCommand(server), "memory");
+        register(new StopCommand(), "stop");
     }
 }

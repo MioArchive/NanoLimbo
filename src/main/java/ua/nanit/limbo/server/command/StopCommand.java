@@ -1,8 +1,8 @@
-package ua.nanit.limbo.server.commands;
+package ua.nanit.limbo.server.command;
 
 import ua.nanit.limbo.server.Command;
 
-public class CmdStop implements Command {
+public class StopCommand implements Command {
 
     @Override
     public void execute() {
@@ -11,6 +11,7 @@ public class CmdStop implements Command {
 
     @Override
     public String description() {
-        return "Stop the server";
+        return "Shuts down the server and terminates all active connections";
     }
+
 }
